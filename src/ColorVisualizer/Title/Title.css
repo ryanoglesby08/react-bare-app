@@ -1,0 +1,10 @@
+.resetH1 {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  composes: resetH1;
+  font-size: 6rem;
+  color: #fff;
+}

@@ -2,12 +2,12 @@ const path = require("path");
 
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
-const nodeModules = path.resolve(__dirname, "node_modules");
+const nodeModules = path.resolve("./node_modules");
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/index.js"),
+  entry: path.resolve("./src/index.js"),
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve("./dist"),
     filename: "app.bundle.js"
   },
   module: {

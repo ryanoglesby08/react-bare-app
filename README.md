@@ -3,8 +3,10 @@ react-bare-app
 
 WIP
 
-This is a minimal React application to give me a starting point for future projects,
-and illustrate some basic principles.
+This is a minimal React application to give me a starting point for future projects, and illustrate some basic principles.
+
+Keep in mind that the front end space changes extremeley rapidly. This repo may be out of date, especially the dependency versions specified in the "package.json" file.
+
 
 What's included here:
 Running tasks/scripts
@@ -61,19 +63,41 @@ Use [webpack](https://webpack.js.org/) as a module bundler. webpack is configure
 
 Write CSS using CSS-in-JS. Avoid using a preprocessor such as Sass or LESS, as those tools encourage global styling and increase the tooling needed to build the styles and the bundle. Don't rely on a naming convention such as BEM for easing the pain of global CSS.
 
-As a base, this repo is configured with webpack's [css-loader](https://github.com/webpack-contrib/css-loader) with [CSS Module](https://github.com/css-modules/css-modules) enabled. This makes all class names local to their component by default
+As a base, this repo is configured with webpack's [css-loader](https://github.com/webpack-contrib/css-loader) with [CSS Modules](https://github.com/css-modules/css-modules) enabled. This makes all class names local to their component by default.
 
-There is a single global style sheet to set up the few needed global and inherited styles, such as applying styles to the `html` and `body` tag and setting the base font.
+### Global CSS
+
+There is a single global style sheet ("global.css") to set up the few needed global and inherited styles, such as applying styles to the `html` and `body` tag and setting the base font. Keep the global CSS footprint to an absolute minimum.
 
 This project does not currently include CSS "resetting." If you need this, consider using the [Eric Meyer reset](https://meyerweb.com/eric/tools/css/reset/). It is lightweight and battle-tested. Though it has been unchanged for many years, it remains very applicable. Because it's not a library, feel free to change it as you see fit.
 
-When you need more capabilities for CSS, consider using [PostCSS](https://github.com/postcss/postcss). It works in a similar manner to Babel, using transformers to process your CSS. PostCSS is still very new though, so be prepared for some growing pains.
+### Expanding your styles
+
+When you need more capabilities for CSS, consider using [PostCSS](https://github.com/postcss/postcss). It works in a similar manner to Babel, using [transformers](https://github.com/postcss/postcss/blob/master/docs/plugins.md) to process your CSS. PostCSS is still very new though, so be prepared for some growing pains.
 
 There are [many CSS-in-JS techniques and libraries around](https://github.com/MicheleBertoli/css-in-js), so do your due diligence before choosing one. I don't have much experience here yet beyond PostCSS with CSS Modules.
 
 
 ## Linting
 
+Both eslint and stylelint are done during the build process by using the [eslint-loader](https://github.com/MoOx/eslint-loader) and [StyleLintPlugin](https://github.com/JaKXz/stylelint-webpack-plugin), respectively.
+
+You may find that you want additional rules, or you do not prefer the rules in place. Feel free to edit the linting settings as you see fit.
+
+### JavaScript
+
+[eslint](http://eslint.org/) is included for linting JavaScript. The ".eslintrc.json" file configures eslint for ES6 and JSX, and includes the following recommended rule settings:
+
+* ['eslint:recommended'](http://eslint.org/docs/rules/)
+* ['plugin:react/recommended'](https://github.com/yannickcr/eslint-plugin-react)
+
+
+### CSS
+
+[stylelint](https://github.com/stylelint/stylelint) is included for linting CSS. The ".stylelintrc.json" file configures stylelint with the following recomended rule settings:
+
+* ['stylelint-config-standard'](https://github.com/stylelint/stylelint-config-standard)
+* ['stylelint-config-css-modules'](https://github.com/pascalduez/stylelint-config-css-modules): Allows stylelint to accept CSS Modules syntax.
 
 
 TODO:

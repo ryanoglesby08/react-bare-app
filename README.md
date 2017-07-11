@@ -22,14 +22,14 @@ Start the development server: `yarn dev-server`
 
 ## What's included here:
 
-[Running tasks](#running-tasks)
-[Component organization](#component-organization)
-[Managing packages](#managing-packages)
-[Building and bundling](#building-and-bundling)
-[Styling](#styling)
-[Linting](#linting)
-[Testing](#testing)
-[Library recommendations](#library-recommendations)
+* [Running tasks](#running-tasks)
+* [Component organization](#component-organization)
+* [Managing packages](#managing-packages)
+* [Building and bundling](#building-and-bundling)
+* [Styling](#styling)
+* [Linting](#linting)
+* [Testing](#testing)
+* [Library recommendations](#library-recommendations)
 
 
 ## Running tasks
